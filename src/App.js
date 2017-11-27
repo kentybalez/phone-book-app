@@ -18,8 +18,8 @@ class App extends Component {
 		]
 	}
 
-	this.handleAddContact =  this.handleAddContact.bind(this);
-	this.handleDeleteContact =  this.handleDeleteContact.bind(this)
+		this.handleAddContact =  this.handleAddContact.bind(this);
+		this.handleDeleteContact =  this.handleDeleteContact.bind(this);
 	}
 
   handleAddContact(contact) {

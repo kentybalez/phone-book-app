@@ -3,12 +3,14 @@
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 ## Basic functionality:
-- add, edit, delete
-- listing
+- Add
+- Edit
+- Delete
+- Listing
 
 ## Constraints:
-- data should be saved locally using local storage
-- you can use any CSS framework
+- Data should be saved locally using local storage
+- You can use any CSS framework
 
 ## Bonus points:
 - has other fields like thumbnail image, etc.
