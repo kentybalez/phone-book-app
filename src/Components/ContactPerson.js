@@ -7,7 +7,12 @@ class ContactPerson extends Component {
     }
 
     updateContact(id) {
-        this.props.onUpdate(id);
+        const updateContact = {
+            id: this.props.contact.id,
+            open: true
+        }
+        
+        this.props.addContact(updateContact);
     }
 
     state = {
@@ -29,7 +34,7 @@ class ContactPerson extends Component {
                 <TableRowColumn>{ this.props.contact.name }</TableRowColumn>
                 <TableRowColumn>{ this.props.contact.number }</TableRowColumn>
                 <TableRowColumn>{ this.props.contact.email }</TableRowColumn>
-                <TableRowColumn><RaisedButton label="Edit" primary={ true } onClick={ this.updateContact.bind(this, this.props.contact.id) } ></RaisedButton></TableRowColumn>
+                <TableRowColumn><RaisedButton label="Edit" primary={ true } onClick={ this.updateContact.bind(this) }></RaisedButton></TableRowColumn>
                 <TableRowColumn><RaisedButton label="Delete" secondary={ true } onClick={ this.deleteContact.bind(this, this.props.contact.id) }></RaisedButton></TableRowColumn>
             </TableRow>
         );
