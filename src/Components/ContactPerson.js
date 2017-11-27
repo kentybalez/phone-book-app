@@ -21,7 +21,7 @@ class ContactPerson extends Component {
                 <TableRowColumn>{ this.props.contact.name }</TableRowColumn>
                 <TableRowColumn>{ this.props.contact.number }</TableRowColumn>
                 <TableRowColumn>{ this.props.contact.email }</TableRowColumn>
-                <TableRowColumn><RaisedButton label="Edit" primary={ true }></RaisedButton></TableRowColumn>
+                {/* <TableRowColumn><RaisedButton label="Edit" primary={ true }></RaisedButton></TableRowColumn> */}
                 <TableRowColumn><RaisedButton label="Delete" secondary={ true } onClick={ this.deleteContact.bind(this, this.props.contact.id) }></RaisedButton></TableRowColumn>
             </TableRow>
         );

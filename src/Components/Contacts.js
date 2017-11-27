@@ -32,7 +32,7 @@ class Contacts extends Component {
                             <TableHeaderColumn>Name</TableHeaderColumn>
                             <TableHeaderColumn>Number</TableHeaderColumn>
                             <TableHeaderColumn>Email</TableHeaderColumn>
-                            <TableHeaderColumn className="action" colSpan="2">Action</TableHeaderColumn>
+                            <TableHeaderColumn className="action">Action</TableHeaderColumn>
                         </TableRow>
                     </TableHeader>
                     <TableBody>
