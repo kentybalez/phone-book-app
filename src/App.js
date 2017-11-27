@@ -16,7 +16,19 @@ class App extends Component {
 				name: "Juan Dela Cruz",
 				number: "090612345678",
 				email: "juandc@gmail.com"
-			}
+			}, 
+			{
+				id: uuid.v4(),
+				name: "Maria Dela Cruz",
+				number: "090612354687",
+				email: "mariadc@gmail.com"
+			}, 
+			{
+				id: uuid.v4(),
+				name: "Kent Nehemiah Ybalez",
+				number: "09064189068",
+				email: "kent@gmail.com"
+			}, 
 		]
 	}
 
