@@ -15,7 +15,7 @@ class App extends Component {
 
 	this.handleAddContact =  this.handleAddContact.bind(this);
 	this.handleDeleteContact =  this.handleDeleteContact.bind(this)
-  }
+	}
 
   handleAddContact(contact) {
 	let contacts = this.state.contacts;
@@ -33,11 +33,6 @@ class App extends Component {
 	  this.setState({contacts:contacts});
 	}
 
-	handleUpdateContact(id) {
-		let contacts = this.state.contacts;
-		
-	}
-
   render() {
 		
 	return (
@@ -50,7 +45,7 @@ class App extends Component {
 							<AddContact addContact={ this.handleAddContact }/>
 						</Col>
 						<Col xs={4} md={8}>
-							<Contacts onDelete={ this.handleDeleteContact } onUpdate={ this.handleUpdateContact } contacts = { this.state.contacts }/>
+							<Contacts onDelete={ this.handleDeleteContact } contacts = { this.state.contacts }/>
 						</Col>
 					</Row>
 				</Grid>

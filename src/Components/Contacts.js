@@ -7,21 +7,12 @@ class Contacts extends Component {
         this.props.onDelete(id);
     }
 
-    updateContact(e) {
-        const updateContact = {
-            id: this.props.contact.id,
-            open: true
-        }
-        this.props.addContact(updateContact);
-    }
-
-
     render() {
         let contactList;
         if (this.props.contacts) {
             contactList = this.props.contacts.map(contact => {
                 return (
-                    <ContactPerson onDelete={ this.deleteContact.bind(this) } onUpdate={ this.updateContact.bind(this) } key={ contact.id } contact={ contact } />
+                    <ContactPerson onDelete={ this.deleteContact.bind(this) } key={ contact.id } contact={ contact } />
                 );
             });
         }
