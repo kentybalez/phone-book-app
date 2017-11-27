@@ -12,7 +12,6 @@ class Contacts extends Component {
             id: this.props.contact.id,
             open: true
         }
-    
         this.props.addContact(updateContact);
     }
 

@@ -6,7 +6,7 @@ class ContactPerson extends Component {
         this.props.onDelete(id);
     }
 
-    updateContact(id) {
+    updateContact(e) {
         const updateContact = {
             id: this.props.contact.id,
             open: true
