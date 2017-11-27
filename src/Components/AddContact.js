@@ -88,7 +88,7 @@ class AddContact extends Component {
                         floatingLabelFixed={ false }
                         onChange={ this.handleEmail }
                     /> <br />
-                    {/* <input type="submit" value="Submit" /> */}
+                    
                     <RaisedButton label="Submit" primary={ true } onClick={ this.handleSubmit.bind(this) }/>
                 </form>
             </Paper>

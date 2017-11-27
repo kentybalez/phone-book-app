@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import AppBar from 'material-ui/AppBar';
+import { Grid, Row, Col } from 'react-material-responsive-grid';
 import Contacts from './Components/Contacts';
 import AddContact from './Components/AddContact';
 import './App.css';
@@ -9,8 +10,7 @@ class App extends Component {
   constructor() {
 	super();
 	this.state = {
-	  contacts: JSON.parse(localStorage.getItem('contacts')) || [],
-	  open: false
+	  contacts: JSON.parse(localStorage.getItem('contacts')) || []
 	}
 
 	this.handleAddContact =  this.handleAddContact.bind(this);
@@ -31,17 +31,24 @@ class App extends Component {
 	  contacts.splice(index, 1);
 	  localStorage.setItem('contacts', JSON.stringify(contacts));
 	  this.setState({contacts:contacts});
-  }
+	}
 
   render() {
 		
 	return (
 		<MuiThemeProvider>
 			<div className="App">
-				<AppBar title="Phone Book App" />
-				<AddContact addContact={ this.handleAddContact }/>
-				<h2>Contact List</h2>
-				<Contacts onDelete={ this.handleDeleteContact } contacts = { this.state.contacts }/>
+				<Grid>
+					<Row>
+						<AppBar title="Phone Book App" />
+						<Col xs={4} md={4}>
+							<AddContact addContact={ this.handleAddContact }/>
+						</Col>
+						<Col xs={4} md={8}>
+							<Contacts onDelete={ this.handleDeleteContact } contacts = { this.state.contacts }/>
+						</Col>
+					</Row>
+				</Grid>
 			</div>
 		</MuiThemeProvider>
 	);
