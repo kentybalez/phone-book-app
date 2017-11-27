@@ -10,7 +10,14 @@ class App extends Component {
   constructor() {
 	super();
 	this.state = {
-	  contacts: JSON.parse(localStorage.getItem('contacts')) || []
+	  contacts: JSON.parse(localStorage.getItem('contacts')) || [
+			{
+				id: uuid.v4(),
+				name: "Juan Dela Cruz",
+				number: "090612345678",
+				email: "juandc@gmail.com"
+			}
+		]
 	}
 
 	this.handleAddContact =  this.handleAddContact.bind(this);
