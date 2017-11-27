@@ -11,25 +11,10 @@ class App extends Component {
   constructor() {
 	super();
 	this.state = {
-	  contacts: JSON.parse(localStorage.getItem('contacts')) || [
-			{
-				id: uuid.v4(),
-				name: "Juan Dela Cruz",
-				number: "090612345678",
-				email: "juandc@gmail.com"
-			}, 
-			{
-				id: uuid.v4(),
-				name: "Maria Dela Cruz",
-				number: "090612354687",
-				email: "mariadc@gmail.com"
-			}, 
-			{
-				id: uuid.v4(),
-				name: "Kent Nehemiah Ybalez",
-				number: "09064189068",
-				email: "kent@gmail.com"
-			}, 
+	  contacts: (typeof localStorage["contacts"] !== "undefined") ? JSON.parse(localStorage.getItem('contacts')) : [
+			{id: uuid.v4(), name: "Juan Dela Cruz", number: "09061230968", email: "juandc@gmail.com"},
+			{id: uuid.v4(), name: "Maria Dela Cruz", number: "09061230968", email: "mariadc@gmail.com"}, 
+			{id: uuid.v4(), name: "Kent Ybalez", number: "09061230968", email: "kent@gmail.com"}
 		]
 	}
 
