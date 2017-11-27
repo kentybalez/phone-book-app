@@ -3,6 +3,7 @@ import uuid from 'uuid';
 import TextField from 'material-ui/TextField';
 import Paper from 'material-ui/Paper';
 import RaisedButton from 'material-ui/RaisedButton';
+import ContactPerson from './ContactPerson';
 
 class EditContact extends Component {
     constructor(props) {

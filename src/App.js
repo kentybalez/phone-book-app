@@ -23,11 +23,12 @@ class App extends Component {
 	}
 
   handleAddContact(contact) {
-	let contacts = this.state.contacts;
-	contacts.push(contact);
-	localStorage.setItem('contacts', JSON.stringify(contacts));
-	this.setState({contacts:contacts});
-	//console.log(contact);
+		let contacts = this.state.contacts;
+		contacts.push(contact);
+		localStorage.setItem('contacts', JSON.stringify(contacts));
+		this.setState({contacts:contacts});
+		//console.log(contact);
+		alert("New Contact Added!");
   }
 
   handleDeleteContact(id) {
